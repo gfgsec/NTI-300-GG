@@ -7,6 +7,6 @@ if [ -n "$user_name" ]; then
   echo "Hello $user_name!"
   exit 0
 else
-  echo "Toy did not tell me your name!"
+  echo "You did not tell me your name!"
   exit 1
 fi
