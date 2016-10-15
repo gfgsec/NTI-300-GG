@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo yum -y install git
-git clone https://github.com/nic-instruction/NTI-300/
+git clone https://github.com/grantypantyyy/NTI-300-GG.git
 
 echo "a clone of the NTI-300 reposatory is now sitting in this dir, along with a copy of this script \n"
 echo "For a git command line cheet sheet check out https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf \n"
