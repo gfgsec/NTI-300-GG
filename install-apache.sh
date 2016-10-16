@@ -13,4 +13,6 @@ echo "cloning branch from Grants github"
 sudo git clone https://github.com/grantypantyyy/NTI-300-GG/tree/website
 
 echo "Bamboozeling an html file"
-sudo mv NTI-300-GG/tree/website/grantweb.html 
+sudo mv NTI-300-GG/tree/website/grantweb.html /var/www/html
+
+echo "Success!"
