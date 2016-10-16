@@ -10,6 +10,7 @@ echo "starting apache server"
 sudo systemctl start httpd.service
 
 echo "cloning branch from Grants github"
+sudo yum -y install git
 sudo git clone https://github.com/grantypantyyy/NTI-300-GG.git
 
 echo "Bamboozeling an html file"
