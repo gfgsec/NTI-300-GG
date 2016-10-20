@@ -14,4 +14,8 @@ sudo yum -y install git
 sudo git clone https://github.com/grantypantyyy/NTI-300-GG.git
 
 echo "publishing content"
-sudo mv NTI-300-GG/webgrant.html /var/www/html
+sudo cp NTI-300-GG/webgrant.html /var/www/html
+
+echo "adjusting permissions"
+sudo chmod 644 /var/www.html/webgrant.html
+sudo setenforce 0
