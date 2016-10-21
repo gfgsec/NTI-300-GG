@@ -17,5 +17,5 @@ echo "publishing content"
 sudo cp NTI-300-GG/webgrant.html /var/www/html
 
 echo "adjusting permissions"
-sudo chmod 644 /var/www/webgrant.html
+sudo chmod 644 /var/www/html/webgrant.html
 sudo setenforce 0
