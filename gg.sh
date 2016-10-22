@@ -41,7 +41,7 @@ sudo chmod 644 /var/www/html/webgrant.html
 sudo setenforce 0
 
 echo "installing python"
-sudo yum install python
+sudo yum -y install python
 
 echo "current python version:"
 
@@ -98,6 +98,8 @@ echo "django admin is version:"
 django-admin --version
 
 django-admin startproject project1
+
+sudo yum -y install tree
 
 echo "here's our new django project dir"
 
