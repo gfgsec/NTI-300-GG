@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#configuration script for AWS Radhat instance. 
+#Installs apache, github, python, and django, and modifies a few permessions.
+#Before running, make sure that you have inbound firewall rules set for: 
+#      ssh on port 22
+#      http on port 80
+#      Custom port 8000 for django
+
 echo "installing apache server"
 sudo yum -y install httpd
 
