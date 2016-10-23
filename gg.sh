@@ -111,6 +111,9 @@ source /opt/django/django-env/bin/activate
 
 cd /opt/django/project1
 
+sudo chmod 644 /opt/django/project1/manage.py
+sudo setenforce 0
+
 python manage.py runserver 0.0.0.0:8000
 
 echo "go to https://docs.djangoproject.com/en/1.10/intro/tutorial01/"
