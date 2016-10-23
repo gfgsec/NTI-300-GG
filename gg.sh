@@ -111,9 +111,7 @@ source /opt/django/django-env/bin/activate
 
 cd /opt/django/project1
 
-sudo python manage.py runserver 0.0.0.0:8000
-
-deactivate
+python manage.py runserver 0.0.0.0:8000
 
 echo "go to https://docs.djangoproject.com/en/1.10/intro/tutorial01/"
 
