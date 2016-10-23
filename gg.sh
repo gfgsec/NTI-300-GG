@@ -105,4 +105,16 @@ echo "here's our new django project dir"
 
 tree project1
 
+echo "Making django server accessible from web"
+
+source /opt/django/django-env/bin/activate
+
+cd /opt/django/project1
+
+python manage.py runserver 0.0.0.0:8000
+
+deactivate
+
 echo "go to https://docs.djangoproject.com/en/1.10/intro/tutorial01/"
+
+
