@@ -109,10 +109,10 @@ echo "Making django server accessible from web"
 
 source /opt/django/django-env/bin/activate
 
-cd /opt/django/project1
-
 sudo chmod 644 /opt/django/project1/manage.py
 sudo setenforce 0
+
+cd /opt/django/project1
 
 python manage.py runserver 0.0.0.0:8000
 
