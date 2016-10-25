@@ -1,0 +1,24 @@
+#! /bin/bash
+#put these in your .bash_profile
+#DIR_STACK="
+"#export DIR_STACK
+
+function pushd 
+{
+  dirname=$1
+  DIR_STACK="$dirname ${DIR_STACK:-$PWD' '}"
+   cd ${dirname:?"missing directory name."}
+   echo "PUSHD -> $DIR_STACK"
+}
+
+pushd~
+pushd~
+
+function popd
+{
+  DIR_STACK=${DIR_STACK#*' '}
+  cd ${DIR_STACK%% *}
+  echo "POPD -> $DIR_STACK"
+  }
+popd 2> /dev/null
+popd 2> /dev/null
