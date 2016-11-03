@@ -16,7 +16,7 @@ fi
 
 ##Crontab entry to run script every 30 minutes:
 
-30 * * * * /home/ec2-user/server_alert3.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
+1 * * * * /home/ec2-user/server_alert3.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
 
 # ┌───────────── min (0 - 59)
 # │ ┌────────────── hour (0 - 23)
