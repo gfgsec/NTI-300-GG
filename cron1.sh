@@ -3,7 +3,7 @@
 var=$(cat /proc/uptime | cut -d " " -f1)
 users=$(/usr/bin/who | grep -c "")
 
-if [ "$var" > "720" ]; then
+if [ "$var" > "7200" ]; then
     echo "Server `hostname` has been up for more than 2 hours!"
     echo "Number of users logged on: $users"
 fi
@@ -14,9 +14,7 @@ fi
             echo "There are no users logged on."
 fi
 
-##Crontab entry to run script every 30 minutes:
-
-1 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
+*/1 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
 
 # ┌───────────── min (0 - 59)
 # │ ┌────────────── hour (0 - 23)
