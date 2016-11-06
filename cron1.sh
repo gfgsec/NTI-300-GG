@@ -14,14 +14,5 @@ fi
             echo "There are no users logged on." | mail -s "Server Alert" grantgrismore@outlook.com
 fi
 
-#*/1 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
+#*/59 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
 
-# ┌───────────── min (0 - 59)
-# │ ┌────────────── hour (0 - 23)
-# │ │ ┌─────────────── day of month (1 - 31)
-# │ │ │ ┌──────────────── month (1 - 12)
-# │ │ │ │ ┌───────────────── day of week (0 - 6) (0 to 6 are Sunday to
-# │ │ │ │ │                  Saturday, or use names; 7 is also Sunday)
-# │ │ │ │ │
-# │ │ │ │ │
-# * * * * *  command to execute
