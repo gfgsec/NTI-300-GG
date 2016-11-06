@@ -1,1 +1,1 @@
-for i in $( cat my_machines ); do ssh -t -i "load-ballancer-static-content.pem" ec2-user@$i "sudo yum clean all && sudo yum update kernel && sudo reboot"; done
+for i in $( cat my_servers ); do ssh -t -i "NTI300.pem" ec2-user@$i "sudo yum clean all && sudo yum update kernel && sudo reboot"; done
