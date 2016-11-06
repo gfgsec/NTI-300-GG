@@ -11,8 +11,8 @@ fi
             echo "There are users logged on."
 
         else
-            echo "There are no users logged on." | mail -s "Server Alert" grantgrismore@outlook.com
+            echo "There are no users logged on." | mail -s "Server Alert" 4255337380@tmomail.net
 fi
 
-#*/59 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" grant.grismore@seattlecolleges.edu
+#*/59 * * * *  /home/ec2-user/NTI-300-GG/cron1.sh | mail -s "Server Alert" 4255337380@tmomail.net
 
