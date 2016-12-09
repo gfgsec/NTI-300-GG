@@ -28,4 +28,16 @@ def clone_repo():
   os.system('sudo yum -y install git')
   
   print('cloning Grants github repo')
-  os.system('git clone https
+  os.system('git clone https://github.com/grantypantyyy/NTI-300-GG.git')
+  
+ clone_repo()
+
+def publish_site():
+  print('Publishing Website')
+  os.system('sudo cp NTI-300-GG/webgrant.html /var/www/html')
+  print('adjusting permisions')
+  os.system('sudo chmod 644 /var/www/html/webgrant.html')
+  os.system('sudo setenforce 0')
+  
+ publish_site()
+
