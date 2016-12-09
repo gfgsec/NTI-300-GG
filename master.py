@@ -6,7 +6,7 @@ def hello():
   print('Hi NTI300')
   print('This is Grants Python Install Script!')
   
-hello()
+ hello()
 
 def apache_install():
   print('Installing Apache Web Server')
@@ -21,4 +21,11 @@ def apache_install():
   print('IMPORTANT! Create an inbound security rule to open port 80 on the server')
   
   
- install_apache()
+ apache_install()
+
+def clone_repo():
+  print('installing git')
+  os.system('sudo yum -y install git')
+  
+  print('cloning Grants github repo')
+  os.system('git clone https
