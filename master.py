@@ -54,7 +54,7 @@ import subprocess
 def install_django():
   os.chdir('NTI-300-GG')
   os.system('chmod +x django_install.sh')
-  subprocess.call(['django_install.sh'])
+  subprocess.call(['./django_install'])
   
 install_django()
   
