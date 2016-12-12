@@ -46,6 +46,8 @@ def install_django():
   os.system('chmod +x django_install.sh')
   subprocess.call(['./django_install.sh'])
   
+install_django()
+  
   
   
 
