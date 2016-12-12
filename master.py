@@ -6,6 +6,10 @@ def hello():
   print('Hi NTI300')
   print('This is Grants Python Install Script!')
   
+def tree_install():
+  print('Installing tree')
+  os.system('sudo yum -y install tree')
+  
 hello()
 
 def apache_install():
