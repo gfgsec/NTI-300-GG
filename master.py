@@ -50,12 +50,11 @@ def publish_site():
   
 publish_site()
 
-def install_django():
-  os.chdir('NTI-300-GG')
-  os.system('chmod +x django_install')
-  subprocess.call('django_install')
-  
-install_django()
+def django_install():
+    print('Installing Django Web Framework.')
+    os.chdir('NTI-300-GG')
+    os.system('chmod +x django_install')
+    subprocess.call(['./django_install'])
   
   
   
