@@ -57,4 +57,4 @@ echo "This is the new django project directory..."
 
 tree project1
 
-echo "Go to https://docs.djangoproject.com/en/1.10/intro/tutorial01/ to begin first Django Project!
+echo "Go to https://docs.djangoproject.com/en/1.10/intro/tutorial01/ to begin first Django Project!"
