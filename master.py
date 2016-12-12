@@ -56,6 +56,20 @@ def django_install():
     os.system('python /opt/django/project1/manage.py runserver 0.0.0.0:8000')
     
 django_install()
+
+def mailx():
+    print('Installing mailx')
+    os.system('sudo yum -y install mailx')
+
+mailx()
+
+def crontab():
+    print('Creating crontab entry for Server Alert emails every 30 minutes.')
+    os.system('sudo chmod +x /home/ec2-user/NTI-300-GG/cron1.sh')
+    os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/NTI-300-GG/cron1.sh | mail -s \"Server Alert\" wadejs@icloud.com") | crontab - ')
+    os.system('crontab -l')
+
+crontab()
   
   
   
