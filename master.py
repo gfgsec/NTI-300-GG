@@ -38,6 +38,6 @@ def publish_site():
   print('adjusting permisions')
   os.system('sudo chmod 644 /var/www/html/webgrant.html')
   os.system('sudo setenforce 0')
+  os.system('sudo service httpd restart')
   
  publish_site()
-
