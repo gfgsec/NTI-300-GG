@@ -41,6 +41,8 @@ def publish_site():
   
 publish_site()
 
+import subprocess
+
 def install_django():
   os.chdir('NTI-300-GG')
   os.system('chmod +x django_install.sh')
