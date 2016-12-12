@@ -53,6 +53,8 @@ def django_install():
     os.chdir('NTI-300-GG')
     os.system('chmod +x django_install')
     subprocess.call(['./django_install'])
+    
+django_install():
   
   
   
