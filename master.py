@@ -8,8 +8,6 @@ def hello():
   print('This is Grants Python Install Script!')
   
 hello()
-
-#what the heck
   
 def tree_install():
   print('Installing tree')
