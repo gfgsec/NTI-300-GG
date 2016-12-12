@@ -51,9 +51,9 @@ publish_site()
 def django_install():
     print('Installing Django Web Framework.')
     os.chdir('NTI-300-GG')
-    os.system('chmod +x django_install')
+    os.system('chmod +x django_install manage.py')
     subprocess.call(['./django_install'])
-    subprocess.call(['./python manage.py runserver 0.0.0.0:8000'])
+    os.system('python /opt/django/project1/manage.py runserver 0.0.0.0:8000')
     
 django_install()
   
