@@ -6,7 +6,7 @@ def hello():
   print('Hi NTI300')
   print('This is Grants Python Install Script!')
   
- hello()
+hello()
 
 def apache_install():
   print('Installing Apache Web Server')
@@ -20,8 +20,7 @@ def apache_install():
   
   print('IMPORTANT! Create an inbound security rule to open port 80 on the server')
   
-  
- apache_install()
+apache_install()
 
 def clone_repo():
   print('installing git')
@@ -29,8 +28,8 @@ def clone_repo():
   
   print('cloning Grants github repo')
   os.system('git clone https://github.com/grantypantyyy/NTI-300-GG.git')
-  
- clone_repo()
+
+clone_repo()
 
 def publish_site():
   print('Publishing Website')
@@ -40,12 +39,12 @@ def publish_site():
   os.system('sudo setenforce 0')
   os.system('sudo service httpd restart')
   
- publish_site()
+publish_site()
 
 def install_django():
   os.chdir('NTI-300-GG')
   os.system('chmod +x django_install.sh')
-  subprocess.call(['./django_install'])
+  subprocess.call(['./django_install.sh'])
   
   
   
