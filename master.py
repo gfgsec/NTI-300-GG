@@ -1,6 +1,7 @@
 #bin/python
 
 import os
+import subprocess
 
 def hello():
   print('Hi NTI300')
@@ -49,11 +50,9 @@ def publish_site():
   
 publish_site()
 
-import subprocess
-
 def install_django():
   os.chdir('NTI-300-GG')
-  os.system('chmod +x django_install.sh')
+  os.system('chmod +x django_install')
   subprocess.call(['./django_install'])
   
 install_django()
