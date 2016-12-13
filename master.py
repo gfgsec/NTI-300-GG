@@ -55,6 +55,7 @@ def django_install():
     subprocess.call(['./django_install'])
     os.system('^C')
     os.system('python /opt/django/project1/manage.py runserver 0.0.0.0:8000')
+    os.system('^C')
     
 django_install()
 
