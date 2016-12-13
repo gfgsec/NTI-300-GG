@@ -53,9 +53,8 @@ def django_install():
     os.chdir('NTI-300-GG')
     os.system('chmod +x django_install manage.py')
     subprocess.call(['./django_install'])
-    os.system('^C')
     os.system('python /opt/django/project1/manage.py runserver 0.0.0.0:8000')
-    os.system('^C')
+    os.system('exit()')
     
 django_install()
 
