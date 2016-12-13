@@ -73,22 +73,20 @@ def crontab():
 crontab()
 
 print('Updating kernal')
-os.system('sudo yum clean all && sudo yum update kernel && sudo reboot')
+os.system('sudo yum clean all && sudo yum update kernel -y && sudo reboot')
 print('Done!')
 print('Verifying dirty cow patch')
 os.system('sudo rpm -q --changelog kernel | grep CVE-2016-5195')  
 
-import os
 def awscli():
     print('Installing the AWS CLI')
-    os.system('sudo pip install awscli')
+    os.system('sudo pip install -y awscli')
 
 awscli()
 
-import os
 def boto3():
     print('Installing Boto3')
-    os.system('sudo pip install boto3')
+    os.system('sudo pip install -y boto3')
     print('Install Script Complete! AWS RHEL Server ready to use.')
   
 boto3()
