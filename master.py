@@ -71,11 +71,14 @@ def crontab():
 
 crontab()
 
-print('Updating kernal')
-os.system('sudo yum clean all && sudo yum update kernel -y')
-print('Done!')
-print('Verifying dirty cow patch')
-os.system('sudo rpm -q --changelog kernel | grep CVE-2016-5195')  
+def update_kernel():
+  print('Updating kernal')
+  os.system('sudo yum clean all && sudo yum update kernel -y')
+  print('Done!')
+  print('Verifying dirty cow patch')
+  os.system('sudo rpm -q --changelog kernel | grep CVE-2016-5195')
+  
+update_kernel():
 
 def awscli():
     print('Installing the AWS CLI')
