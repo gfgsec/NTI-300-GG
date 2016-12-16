@@ -11,19 +11,19 @@ hello()
   
 def tree_install():
   print('Installing tree')
-  os.system('sudo yum -y install tree')
+  os.system('yum -y install tree')
   
 tree_install()
 
 def apache_install():
   print('Installing Apache Web Server')
-  os.system('sudo yum -y install httpd')
+  os.system('yum -y install httpd')
   
   print('Starting http service')
-  os.system('sudo systemctl enable httpd.service')
+  os.system('systemctl enable httpd.service')
   
   print('Starting apache server')
-  os.system('sudo systemctl start httpd.service')
+  os.system('systemctl start httpd.service')
   
   print('IMPORTANT! Create an inbound security rule to open port 80 on the server')
   
@@ -31,7 +31,7 @@ apache_install()
 
 def clone_repo():
   print('installing git')
-  os.system('sudo yum -y install git')
+  os.system('yum -y install git')
   
   print('cloning Grants github repo')
   os.system('git clone https://github.com/grantypantyyy/NTI-300-GG.git')
@@ -59,7 +59,7 @@ django_install()
 
 def mailx():
     print('Installing mailx')
-    os.system('sudo yum -y install mailx')
+    os.system('yum -y install mailx')
 
 mailx()
 
@@ -73,22 +73,22 @@ crontab()
 
 def update_kernel():
   print('Updating kernal')
-  os.system('sudo yum clean all && sudo yum update kernel -y')
+  os.system('yum clean all && yum update kernel -y')
   print('Done!')
   print('Verifying dirty cow patch')
-  os.system('sudo rpm -q --changelog kernel | grep CVE-2016-5195')
+  os.system('rpm -q --changelog kernel | grep CVE-2016-5195')
   
 update_kernel()
 
 def awscli():
     print('Installing the AWS CLI')
-    os.system('sudo pip install -y awscli')
+    os.system('pip install -y awscli')
 
 awscli()
 
 def boto3():
     print('Installing Boto3')
-    os.system('sudo pip install -y boto3')
+    os.system('pip install -y boto3')
     print('Install Script Complete! AWS RHEL Server ready to use.')
   
 boto3()
