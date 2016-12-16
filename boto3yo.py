@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/bin/python
 
 import boto3
 import base64
@@ -25,7 +25,7 @@ def launch_test_instance():
       MaxCount=1,
       KeyName = amazon_pem_key,
       SecurityGroupIds = firewall_profiles,
-      UserData="""#!/user/bin/python
+      UserData="""#!/bin/python
 
 import os
 import subprocess
@@ -67,11 +67,11 @@ clone_repo()
 
 def publish_site():
   print('Publishing Website')
-  os.system('cp NTI-300-GG/webgrant.html /var/www/html')
+  os.system('sudo cp NTI-300-GG/webgrant.html /var/www/html')
   print('adjusting permisions')
-  os.system('chmod 644 /var/www/html/webgrant.html')
-  os.system('setenforce 0')
-  os.system('service httpd restart')
+  os.system('sudo chmod 644 /var/www/html/webgrant.html')
+  os.system('sudo setenforce 0')
+  os.system('sudo service httpd restart')
   
 publish_site()
 
@@ -92,7 +92,7 @@ mailx()
 
 def crontab():
     print('Creating crontab entry for Server Alert emails every 30 minutes.')
-    os.system('chmod +x /home/ec2-user/NTI-300-GG/cron2.sh')
+    os.system('sudo chmod +x /home/ec2-user/NTI-300-GG/cron2.sh')
     os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/NTI-300-GG/cron2.sh | mail -s \"Server Alert\" grantgrismore@outlook.com") | crontab - ')
     os.system('crontab -l')
 
@@ -100,7 +100,7 @@ crontab()
 
 def update_kernel():
   print('Updating kernal')
-  os.system('yum clean all && sudo yum update kernel -y')
+  os.system('yum clean all && yum update kernel -y')
   print('Done!')
   print('Verifying dirty cow patch')
   os.system('rpm -q --changelog kernel | grep CVE-2016-5195')
