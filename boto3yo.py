@@ -26,7 +26,7 @@ def launch_test_instance():
       KeyName = amazon_pem_key,
       SecurityGroupIds = firewall_profiles,
       UserData="""
-#!bin/python
+#!/bin/python
 
 import os
 import subprocess
