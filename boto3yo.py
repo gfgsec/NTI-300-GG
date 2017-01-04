@@ -4,8 +4,6 @@ import boto3
 import base64
 import pprint
 
-rds = boto3.client('rds', region_name='us-west-2')
-
 ec2 = boto3.resource('ec2')
 client = boto3.client('ec2')
 
