@@ -13,7 +13,7 @@ git config --global user.name "grantypantyyy"
 git config --global user.email "grant.grismore@seattlecolleges.edu"
 
 G#make NTI-310-GG directory accessible
-chmod -R 777 /home/Grant/NTI-310-GG
+chmod -R 777 /home/ggrism01/NTI-310-GG
 
 #install ldap
 
@@ -71,12 +71,12 @@ cp /tmp/NTI-310-GG/config_scripts/db.ldif /etc/openldap/slapd.d/db.ldif
 echo "dn: olcDatabase={2}hdb,cn=config
 changetype: modify
 replace: olcSuffix
-olcSuffix: dc=grant,dc=local
+olcSuffix: dc=ggrism01,dc=local
 
 dn: olcDatabase={2}hdb,cn=config
 changetype: modify
 replace: olcRootDN
-olcRootDN: cn=ldapadm,dc=grant,dc=local
+olcRootDN: cn=ldapadm,dc=ggrism01,dc=local
 
 dn: olcDatabase={2}hdb,cn=config
 changetype: modify
