@@ -67,16 +67,16 @@ chmod 600 /root/ldap_admin_pass
 #copy db.ldif and add to config
 
 echo "echo db.ldif and adding it to ldap configuration..."
-cp /tmp/NTI-310-G/config_scripts/db.ldif /etc/openldap/slapd.d/db.ldif
+cp /tmp/NTI-310-GG/config_scripts/db.ldif /etc/openldap/slapd.d/db.ldif
 echo "dn: olcDatabase={2}hdb,cn=config
 changetype: modify
 replace: olcSuffix
-olcSuffix: dc=jwade,dc=local
+olcSuffix: dc=grant,dc=local
 
 dn: olcDatabase={2}hdb,cn=config
 changetype: modify
 replace: olcRootDN
-olcRootDN: cn=ldapadm,dc=jwade,dc=local
+olcRootDN: cn=ldapadm,dc=grant,dc=local
 
 dn: olcDatabase={2}hdb,cn=config
 changetype: modify
@@ -89,7 +89,7 @@ sleep 5
 #copy monitor.ldif and add to config
 
 echo "Copying monitor.ldif, adjusting ownership, and adding it to ldap configuration..."
-cp /tmp/NTI-310/config_scripts/monitor.ldif /etc/openldap/slapd.d/monitor.ldif
+cp /tmp/NTI-310-GG/config_scripts/monitor.ldif /etc/openldap/slapd.d/monitor.ldif
 chown ldap. /etc/openldap/slapd.d/monitor.ldif
 
 ldapmodify -Y EXTERNAL  -H ldapi:/// -f /etc/openldap/slapd.d/monitor.ldif
@@ -113,7 +113,7 @@ chown -R ldap:ldap /etc/openldap/certs/*.pem
 #copy cert ldif and add to config
 
 echo "Copying cert.ldif and adding it to ldap configuration..."
-cp /tmp/NTI-310/config_scripts/certs.ldif /etc/openldap/slapd.d/certs.ldif
+cp /tmp/NTI-310-GG/config_scripts/certs.ldif /etc/openldap/slapd.d/certs.ldif
 ldapmodify -Y EXTERNAL  -H ldapi:/// -f /etc/openldap/slapd.d/certs.ldif
 
 #add the cosine and nis LDAP schemas
@@ -133,12 +133,12 @@ ldapadd -x -D "cn=ldapadm,dc=jwade,dc=local" -f /etc/openldap/slapd.d/base.ldif 
 #allow cn=xxx,dc=xxx,dc=xxx login
 
 echo "Setting login to fqdn..."
-cp -f /tmp/NTI-310/config_scripts/config.php /etc/phpldapadmin/config.php
+cp -f /tmp/NTI-310-GG/config_scripts/config.php /etc/phpldapadmin/config.php
 
 #allow login from the web
 
 echo "Making ldap htdocs accessible from the web..."
-cp -f /tmp/NTI-310/config_scripts/phpldapadmin.conf /etc/httpd/conf.d/phpldapadmin.conf
+cp -f /tmp/NTI-310-GG/config_scripts/phpldapadmin.conf /etc/httpd/conf.d/phpldapadmin.conf
 
 #restart htttpd, slapd services
 
