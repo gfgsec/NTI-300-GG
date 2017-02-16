@@ -4,7 +4,7 @@
 
 #install git
 
-decho "Installing git..."
+echo "Installing git..."
 yum -y install git
 
 echo "Cloning grantypantyyy's NTI-310 GitHub..."
