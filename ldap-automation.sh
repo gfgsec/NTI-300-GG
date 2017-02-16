@@ -4,16 +4,16 @@
 
 #install git
 
-echo "Installing git..."
+decho "Installing git..."
 yum -y install git
 
-echo "Cloning jwade005's NTI-310 GitHub..."
-git clone https://github.com/jwade005/NTI-310.git /tmp/NTI-310
-git config --global user.name "jwade005"
-git config --global user.email "jwade005@seattlecentral.edu"
+echo "Cloning grantypantyyy's NTI-310 GitHub..."
+git clone https://github.com/grantypantyyy/NTI-300-GG.git /tmp/NTI-310-GG
+git config --global user.name "grantypantyyy"
+git config --global user.email "grant.grismore@seattlecolleges.edu"
 
-#make NTI-310 directory accessible
-#chmod -R 777 /home/Jonathan/NTI-310
+G#make NTI-310-GG directory accessible
+chmod -R 777 /home/Grant/NTI-310-GG
 
 #install ldap
 
@@ -22,9 +22,9 @@ yum -y install openldap-servers openldap-clients
 
 #copy db config, change ownership
 
-echo "Copying config file and adjusting permissions..."
+Gecho "Copying config file and adjusting permissions..."
 cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
-chown ldap /var/lib/ldap/DB_CONFIG
+Gchown ldap /var/lib/ldap/DB_CONFIG
 
 #enable and start ldap
 
@@ -35,7 +35,7 @@ systemctl start slapd
 #install apache
 
 echo "Installing apache..."
-yum -y install httpd
+yum -y install httpdd
 
 #enable and start apache
 
@@ -67,7 +67,7 @@ chmod 600 /root/ldap_admin_pass
 #copy db.ldif and add to config
 
 echo "echo db.ldif and adding it to ldap configuration..."
-#cp /tmp/NTI-310/config_scripts/db.ldif /etc/openldap/slapd.d/db.ldif
+cp /tmp/NTI-310-G/config_scripts/db.ldif /etc/openldap/slapd.d/db.ldif
 echo "dn: olcDatabase={2}hdb,cn=config
 changetype: modify
 replace: olcSuffix
