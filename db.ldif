@@ -1,0 +1,16 @@
+cn=config  cn=config.ldif  db.ldif
+[root@ldap2 slapd.d]# cat db.ldif
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=ggrism01,dc=local
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: cn=ldapadm,dc=ggrism01,dc=local
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootPW
+olcRootPW: {SSHA}GPXFuWF5UpPvm9fdn/O4w2QsrKA8+RXr
