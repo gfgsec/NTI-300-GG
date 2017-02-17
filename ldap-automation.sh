@@ -154,6 +154,10 @@ firewall-cmd --reload
 
 echo "ldap configuration complete. Point your browser to http://<serverIPaddress>/phpldapadmin to login..."
 
+rm /etc/openldap/slapd.d/db.ldif
+cp /home/grant/NTI-310-GG/db.ldif /etc/openldap/slapd.d/
+chmod 777
+
 #cp from repo 
 #/etc/openldap/slapd.d/db.ldif
 #/etc/phpldapadmin/config.php
